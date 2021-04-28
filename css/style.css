@@ -958,6 +958,10 @@ section {
   overflow: hidden;
 }
 
+.works__item-pict a {
+  display: block;
+}
+
 .works__item-pict a img {
   -webkit-transition: .2s;
   transition: .2s;
@@ -1361,6 +1365,10 @@ section {
 .p-work-others__item-pict {
   border: 3px solid #333;
   overflow: hidden;
+}
+
+.p-work-others__item-pict a {
+  display: block;
 }
 
 .p-work-others__item-pict a img {
