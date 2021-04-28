@@ -489,7 +489,7 @@ section {
   position: absolute;
   width: 500px;
   height: 230px;
-  background: url("/images/bg-firstview-leaf-left_pc.png") no-repeat border-box left top/contain;
+  background: url("../images/bg-firstview-leaf-left_pc.png") no-repeat border-box left top/contain;
   top: 0;
   left: 0;
 }
@@ -498,7 +498,7 @@ section {
   .firstview-bg:before {
     width: 240px;
     height: 140px;
-    background: url("/images/bg-firstview-leaf-left_sp.png") no-repeat border-box left top/contain;
+    background: url("../images/bg-firstview-leaf-left_sp.png") no-repeat border-box left top/contain;
   }
 }
 
@@ -507,7 +507,7 @@ section {
   position: absolute;
   width: 500px;
   height: 220px;
-  background: url("/images/bg-firstview-leaf-right_pc.png") no-repeat border-box right bottom/contain;
+  background: url("../images/bg-firstview-leaf-right_pc.png") no-repeat border-box right bottom/contain;
   bottom: 0;
   right: 0;
 }
@@ -516,7 +516,7 @@ section {
   .firstview-bg:after {
     width: 200px;
     height: 100px;
-    background: url("/images/bg-firstview-leaf-right_sp.png") no-repeat border-box right bottom/contain;
+    background: url("../images/bg-firstview-leaf-right_sp.png") no-repeat border-box right bottom/contain;
   }
 }
 
@@ -1080,7 +1080,7 @@ section {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url(/images/icon-firstview-info-github.svg);
+  background-image: url(../images/icon-firstview-info-github.svg);
   background-size: contain;
   vertical-align: bottom;
   margin: 0 8px 0 0;
