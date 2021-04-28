@@ -1,11 +1,11 @@
 $(function(){
-  var headerHeight = $('#header').outerHeight();
+  var headerHeight = $('.header').outerHeight();
   var urlHash = location.hash;
   if(urlHash) {
     $('body,html').stop().scrollTop(0);
     setTimeout(function(){
       var target = $(urlHash);
-      var position = target.offset().top - headerHeight ;
+      var position = target.offset().top - headerHeight;
       $('body,html').stop().animate({scrollTop:position}, 500);
     }, 100);
   }
@@ -18,7 +18,7 @@ $(function(){
 });
 
 $(function(){
-  $('#header a[href^="#"]').click(function(){
+  $('.header a[href^="#"]').click(function(){
     if ($('input[id="hamburger"]').prop('checked')) {
       $('input[id="hamburger"]').prop('checked', false);
     } else {
