@@ -1,5 +1,5 @@
 $(function(){
-  var headerHeight = $('.header').outerHeight();
+  var headerHeight = $('#header').outerHeight();
   var urlHash = location.hash;
   if(urlHash) {
     $('body,html').stop().scrollTop(0);
@@ -18,7 +18,7 @@ $(function(){
 });
 
 $(function(){
-  $('.header a[href^="#"]').click(function(){
+  $('#header a[href^="#"]').click(function(){
     if ($('input[id="hamburger"]').prop('checked')) {
       $('input[id="hamburger"]').prop('checked', false);
     } else {
