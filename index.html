@@ -5,17 +5,28 @@
     <title>ポートフォリオサイト</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/ofi.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script>
-      var dir = './'
-      headerInclude(dir);
-      footerInclude(dir);
-    </script>
   </head>
   <body>
-    <header id="header" class="header"></header>
+    <header id="header" class="header">
+      <div class="header__logo">
+          <h1>
+            <a href="../">
+              <span class="header__logo-title">Tech Taro</span>
+              <span class="header__logo-sub">Portfolio</span>
+            </a>
+          </h1>
+        </div>
+        <div class="header__hamburger">
+          <i></i>
+        </div>
+        <nav class="header__gnav">
+          <ul class="header__gnav-list">
+            <li class="header__gnav-item"><a href="#a-profile">PROFILE</a></li>
+            <li class="header__gnav-item"><a href="#a-skill">SKILL</a></li>
+            <li class="header__gnav-item"><a href="#a-works">WORKS</a></li>
+          </ul>
+        </nav>
+    </header>
     <div class="firstview firstview-bg">
       <div class="firstview__inner">
         <div class="firstview__main">
@@ -217,6 +228,9 @@
         </div>
       </section>
     </main>
-    <footer id="footer" class="footer"></footer>
+    <footer id="footer" class="footer"><p>&copy; Taro Tech.</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ofi.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
