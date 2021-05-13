@@ -1,28 +1,35 @@
-$(function(){
-  var headerHeight = $('.header').outerHeight();
-  var urlHash = location.hash;
-  if(urlHash) {
-    $('body,html').stop().scrollTop(0);
-    setTimeout(function(){
-      var target = $(urlHash);
-      var position = target.offset().top - headerHeight;
-      $('body,html').stop().animate({scrollTop:position}, 500);
-    }, 100);
-  }
-  $('a[href^="#"]').click(function() {
-    var href= $(this).attr("href");
-    var target = $(href);
-    var position = target.offset().top - headerHeight;
-    $('body,html').stop().animate({scrollTop:position}, 500);
-  });
-});
 
-$(function(){
-  $('.header a[href^="#"]').click(function(){
-    if ($('input[id="hamburger"]').prop('checked')) {
-      $('input[id="hamburger"]').prop('checked', false);
-    } else {
-      $('input[id="hamburger"]').prop('checked', true);
+var headerhtml = '../shared/header.html';
+function headerInclude(directory){
+  $.ajax({
+  type: 'get',
+  url: directory + headerhtml,
+  dataType: 'html',
+  success: function(data) {
+    data = data.replace(/\{\$root\}/g, directory);
+      $("#header").append(data);
+      console.log(data)
     }
   });
-});
+}
+
+var footerhtml = '../shared/footer.html';
+function footerInclude(directory){
+  $.ajax({
+  type: 'get',
+  url: directory + footerhtml,
+  dataType: 'html',
+  success: function(data) {
+    console.log(data)
+      data = data.replace(/\{\$root\}/g, directory);
+      $("#footer").append(data);
+    }
+  });
+}
+
+// $(function() {
+//   $("#header").load("../shared/header.html");
+//   $("#footer").load("../shared/footer.html");
+// });
+
+objectFitImages('.obj-fit-img');

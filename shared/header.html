@@ -1,0 +1,48 @@
+<div class="header__logo">
+  <h1>
+    <a href="{$root}">
+      <span class="header__logo-title">Tech Taro</span>
+      <span class="header__logo-sub">Portfolio</span>
+    </a>
+  </h1>
+</div>
+<!-- <input id="hamburger" class="header__hamburger" type="checkbox" /> -->
+<div class="header__hamburger">
+  <i></i>
+</div>
+<nav class="header__gnav">
+  <ul class="header__gnav-list">
+    <li class="header__gnav-item"><a href="{$root}#a-profile">PROFILE</a></li>
+    <li class="header__gnav-item"><a href="{$root}#a-skill">SKILL</a></li>
+    <li class="header__gnav-item"><a href="{$root}#a-works">WORKS</a></li>
+  </ul>
+</nav>
+
+<script>
+  $(function(){
+    $('.header__hamburger').on('click', function(){
+      $('.header__hamburger').toggleClass('is-active');
+    });
+
+    $('.header__gnav-item a').on('click', function() {
+      $('.header__hamburger').removeClass('is-active');
+    });
+
+    var headerHeight = $('.header').outerHeight();
+    var urlHash = location.hash;
+    if(urlHash) {
+        $('body,html').stop().scrollTop(0);
+        setTimeout(function(){
+            var target = $(urlHash);
+            var position = target.offset().top - headerHeight;
+            $('body,html').stop().animate({scrollTop:position}, 500);
+        }, 100);
+    }
+    $('a[href^="#"]').click(function() {
+        var href= $(this).attr("href");
+        var target = $(href);
+        var position = target.offset().top - headerHeight;
+        $('body,html').stop().animate({scrollTop:position}, 500);
+    });
+  });
+</script>
