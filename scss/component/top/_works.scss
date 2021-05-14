@@ -42,18 +42,23 @@
 
     &-pict {
       border: 3px solid $font-color;
-      overflow:hidden;
+      overflow: hidden;
 
       a {
         display: block;
+        padding: calc(272 / 365 * 100% / 2);
+        background: no-repeat;
+        background-size: cover;
+        background-position: center;
 
         img {
-          font-family: "object-fit:cover";
-          object-fit: cover;
+          padding: 100%;
           transition: .2s;
         }
 
         &:hover {
+          transform: scale(1.1,1.1);
+
           img {
             transform: scale(1.1,1.1);
           }
