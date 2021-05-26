@@ -1,6 +1,7 @@
 .firstview {
   padding: 132px 5% 64px;
   background: $primary-color;
+  overflow: hidden;
 
   @include xs {
     padding: 132px 5% 80px;
